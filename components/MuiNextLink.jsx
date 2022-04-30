@@ -24,7 +24,7 @@ export const NextLinkComposed = React.forwardRef(function NextLinkComposed(props
     </NextLink>
   );
 });
-// NextLinkComposed.displayName = "NextLinkComposed";
+NextLinkComposed.displayName = "NextLinkComposed";
 
 // A styled version of the Next.js Link component:
 // https://nextjs.org/docs/#with-link
