@@ -1,5 +1,12 @@
+import SectionAbout from "@components/SectionAbout";
+import { Box } from "@mui/system";
+
 const AboutUsPage = () => {
-  return <h1>This is about us page</h1>;
+  return (
+    <Box sx={{ mt: 15 }} >
+      <SectionAbout />
+    </Box>
+  );
 };
 
 export default AboutUsPage;

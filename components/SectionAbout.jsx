@@ -21,13 +21,13 @@ const SectionAbout = () => {
           container flexDirection="column" justifyContent="center" alignItems="center"
         >
           <Typography component="h2" variant="h4" textAlign="center" gutterBottom>
-            요리를 잘하는 요리사
+            [체험코딩]이란
           </Typography>
-          <Typography textAlign="center" sx={{ mb: 5 }}>
-              {`We mix Western ingredients and cooking methods. Provide you
-            with a different tasting dimension with the fusion food in our restaurant.
-            Don't miss the chance to surprise your tongue!`}
-          </Typography>    
+          <Typography textAlign="center" sx={{ mb: 2 }}>
+            [체험코딩]이란 제대로 배우기 전에, <br/>나랑 잘 맞나 안맞나 체험을 해보고 결정하는 과정입니다.
+            <br/><br/>
+            이 사이트는 &quot;Next.js로 웹사이트 만들어 배포하기&quot; 강의를 보고 따라 만들어 본 사이트입니다.
+          </Typography>
           <MuiNextLink href="/about-us" underline="none">
             <Button variant="outlined" size="large">
               About Us
