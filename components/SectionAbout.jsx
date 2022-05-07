@@ -11,7 +11,7 @@ const SectionAbout = () => {
         <Grid item xs={12} sm={6}>
           <Image
             src="/images/chef.svg"
-            alt="A Chef"
+            alt="A Developer"
             layout="responsive"
             width={800}
             height={600}
