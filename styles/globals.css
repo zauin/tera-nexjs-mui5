@@ -1,3 +1,4 @@
 .active {
-  opacity: 1;
+  opacity: 1 !important;
+  color: #ffffff !important;
 }
