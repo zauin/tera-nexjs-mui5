@@ -1,7 +1,9 @@
 // ./pages/contact.js
 
 const ContactPage = () => {
-  return <h1>This is contact page</h1>;
+  return (
+    <h1>This is contact page</h1>
+  );
 };
 
 export default ContactPage;
