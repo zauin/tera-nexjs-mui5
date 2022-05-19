@@ -30,7 +30,7 @@ const Homepage = () => {
               imgAlt="food menu"
               title="Menu"
               desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, minus."
-              pagePath="./menu"
+              pagePath="/menu"
               ctaText="Check Out"
             />
           </Grid>
@@ -40,7 +40,7 @@ const Homepage = () => {
               imgAlt="catering"
               title="Catering"
               desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, minus."
-              pagePath="./catering"
+              pagePath="/catering"
               ctaText="Find Out"
             />
 
