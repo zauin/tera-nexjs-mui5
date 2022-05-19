@@ -11,14 +11,14 @@ import NavigationCard from "@components/NavigationCard";
 const Homepage = ({ heroList }) => {
   return (
     <>
-      { heroList && (
+      { heroList.data && (
         <Hero
           imgSrc="/images/home-hero.jpg"
           imgAlt="Hero Image"
           // title="Next.js 체험코딩"
-          title={heroList.data.attributes.title}
-          // subtitle={titles.attributes.title}
-          subtitle="Next.js와 MUI로 빠르게 웹사이트 만들기"
+          title={heroList.data.attributes.hero_title}
+          subtitle={heroList.data.attributes.hero_subtitle}
+          // subtitle="Next.js와 MUI로 빠르게 웹사이트 만들기"
         />
       )}
       <SectionAbout />
@@ -58,7 +58,7 @@ export default Homepage;
 
 
 Homepage.getInitialProps = async () => {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts/1`);
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/home-contents/1`);
   const heroList = await response.json();
   // console.log(heroList);
   return {heroList: heroList}
