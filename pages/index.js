@@ -8,15 +8,19 @@ import SectionReview from "@components/SectionReview";
 
 import NavigationCard from "@components/NavigationCard";
 
-const Homepage = () => {
+const Homepage = ({ heroList }) => {
   return (
     <>
-      <Hero
-        imgSrc="/images/home-hero.jpg"
-        imgAlt="Hero Image"
-        title="Next.js 체험코딩"
-        subtitle="Next.js와 MUI로 빠르게 웹사이트 만들기"
-      />
+      { heroList && (
+        <Hero
+          imgSrc="/images/home-hero.jpg"
+          imgAlt="Hero Image"
+          // title="Next.js 체험코딩"
+          title={heroList.data.attributes.title}
+          // subtitle={titles.attributes.title}
+          subtitle="Next.js와 MUI로 빠르게 웹사이트 만들기"
+        />
+      )}
       <SectionAbout />
       <SectionImage imgSrc="/images/fusion-food.jpg" imgAlt="fusion food" />
       <SectionReview />
@@ -50,5 +54,12 @@ const Homepage = () => {
     </>    
   );
 };
-
 export default Homepage;
+
+
+Homepage.getInitialProps = async () => {
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts/1`);
+  const heroList = await response.json();
+  // console.log(heroList);
+  return {heroList: heroList}
+}
